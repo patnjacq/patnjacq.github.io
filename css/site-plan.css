@@ -34,16 +34,16 @@ header {
   padding: 1em;
   text-align: center;
   color: var(--accent2-color);
-  background-color: --primary-color;
+  background-color: var(--primary-color);
 }
 
 header>h1 {
-  color: --accent2-color
+  color: var(--accent2-color)
 }
 
 p {
   font-family: var(--paragraph-font);
-  color:--accent1-color;
+  color:var(--accent1-color);
   padding: 1em
 }
 
