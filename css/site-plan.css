@@ -2,7 +2,7 @@
 
 :root {
   --primary-color: #5C2751;
-  --secondary-color: #6457A6;
+  --secondary-color: hsl(250, 31%, 50%);
   --accent1-color: #4BC0D9;
   --accent2-color: #76E5FC;
   --heading-font: 'Poppins', sans-serif; 
@@ -17,9 +17,11 @@ html {
 body {
   max-width: 900px;
   margin: 0 auto;
-  background-color: white;
+  ;
   padding: 1em
 }
+
+
 
 img {
   max-width: 100%
