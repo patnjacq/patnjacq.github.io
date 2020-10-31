@@ -17,7 +17,7 @@ header, main, footer {
 header {
   background-color: #92a8d1;
   display: grid;
-  grid-column: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
 }
 .logo {
