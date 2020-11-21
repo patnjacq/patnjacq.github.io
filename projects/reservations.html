@@ -27,37 +27,44 @@
 
 
     </header>
-    <main class = reservation></main>
-    <div id="feedback"></div>
+    <main> 
+        <div id="feedback"></div>
+    <div class = reservation>
+        <img src="images/desk.jpg" alt="Hotel front desk" />
+        <section class = res-form>
+
+        <h2>Online Reservation Form</h2>
+        <p>Please submit your reservation request below:</p>
+    
     <form action="/my-handling-form-page" method="post"> 
         <ul>
         <li>
-            <label for="firstname">First Name:</label>
-            <input type="text" id="firstname" name="user-firstname" />
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="user_fname" />
         </li>
         <li>
-            <label for="lastname">Last Name:</label>
-            <input type="text" id="lastname" name="user-lastname" />
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="user_lname" />
+        </li>
+        <li>
+        <label for="mail">E-mail:</label>
+        <input type="email" id="mail" name="user_email" />
+        </li>
+        <li>
+            <label for="adate">Arrival Date:</label>
+            <input type="date" id="adate" name="user_adate" />
+        </li>
+        <li>
+            <label for="ddate">Departure Date:</label>
+            <input type="date" id="ddate" name="user_ddate" />
         </li>
         
         <li>
-            <label for="mail">E-mail:</label>
-            <input type="email" id="mail" name="user-email" />
-        </li>
-        <li>
-            <label for = "arrival">Arrival Date:</label>
-            <input type="date" id = "arrival" name = "arrive-date">
-        </li>
-        <li>
-            <label for="departure">Departure Date</label>
-            <input type="date" id = "departure" name="leave-date">
-        </li>
-        <li>
-            <label for="msg">Message:</label>
-            <textarea id="msg" name="user_message"></textarea>
+        <label for="msg">Message:</label>
+        <textarea id="msg" name="user_message"></textarea>
         </li>
         <li class="button">
-            <button type="submit">Send your message</button>
+            <button type="submit">Get More Info</button>
         </li>
         </ul>
     </form>  
@@ -72,11 +79,14 @@
           // stop the form from doing the default action
           e.preventDefault();
           // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
-          feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thanks for your message. We will email you as soon as possible at ' +formElement.user_email.value +'.';
+          feedbackElement.innerHTML = 'Hello '+ formElement.user_fname.value +'! Thanks for your message. We will email you as soon as possible at with your reservation confirmation.';
           // make the feedback element visible.
           feedbackElement.style.display = "block";
         });
-      </script>    
+      </script> 
+      </section>
+      </div> 
+    
    </main> 
     <footer>
       <div class = "contact">
@@ -99,6 +109,8 @@
               <img src="images/instagram.png" alt="instagram logo" width = "50" height="50">
           </a>
       </div>  
+  
       <p class = "last">copyright &#xA9; 2020 Temple Inn & Suites|All Rights Reserved|Privacy and Cookie Statement|Jacquelyn Yancey</p>
-  </html>
+    </footer>
+</html>
   
