@@ -204,10 +204,9 @@
         padding-bottom: 0;
         display: flex;
     }
-    .cardholder {
-       
+    .cardholder {       
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 2rem;
         
         margin: 0 2rem;
@@ -345,12 +344,12 @@
     footer p{
         text-align: center;
         padding: 2rem;
-        color:var(--accent2-color);
+        color: black;
         margin: 0 auto;
        
     }
     footer a{
-        color: var(--accent2-color);
+        color: black;
         text-decoration: underline;
     }
     footer{
