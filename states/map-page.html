@@ -19,52 +19,45 @@
         <div class = barright>
             <h1> All 50 States</h1>
         </div>
-            <div class = "spacer maps">
+
+            
+           
+            <div class = spacer>
+                
             </div>
         
     </header>
     <main>
-        <div class = maps>
-            <div class = subhead>
-                <h2>How We Got There</h2> 
-                <ul class= navspot>
-                    <li><a href="index.html">Home</a></li>           
-                    <li><a href="central.html">Where We've Been </a></li>
-                </ul>
-            </div>
-            <div class = routes>            
-                <div class = "trip2">
-                    <img src="images/or-wa-map.jpg" width="240" height="323"  alt="OR/WA trip"> 
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel beatae amet et maxime dolore doloremque cum magni nam repellendus labore quis deserunt eligendi, nesciunt sint laudantium distinctio suscipit consequuntur? Quod!</p>
-                </div>
-                <div class = "trip1">
-                    <img src="images/bigtrip-map.jpg" width="450" height="286" alt="Nine states trip"> 
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto cumque impedit adipisci accusantium deserunt perferendis error eligendi, harum iste nisi ad eaque? Harum, voluptatem quaerat eum eos unde quos quo.</p>
-                </div>
-            </div>
-
+        <div class = places>
+        <div class = subhead>
+            <h2>Been There, Done That!</h2> 
+            <ul class= navspot>
+                <li><a href="index.html">Home</a></li>           
+                <li><a href="maps.html">How We Got There </a></li>
+            </ul>
+        </div>
 
         <div id="feedback"></div>
         <form action="/my-handling-form-page" method="post"> 
             <ul>
-                <li>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="user_name" />
-                </li>
-                <li>
-                    <label for="mail">E-mail:</label>
-                    <input type="email" id="mail" name="user_email" />
-                </li>
-                <li>
-                    <label for="msg">Message:</label>
-                    <textarea id="msg" name="user_message"></textarea>
-                </li>
-                <li class="button">
-                    <button type="submit">Send your message</button>
-                </li>
+            <li>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="user_name" />
+            </li>
+            <li>
+            <label for="mail">E-mail:</label>
+            <input type="email" id="mail" name="user_email" />
+            </li>
+            <li>
+            <label for="msg">Message:</label>
+            <textarea id="msg" name="user_message"></textarea>
+            </li>
+            <li class="button">
+                <button type="submit">Send your message</button>
+            </li>
             </ul>
         </form>  
-        <!-- <script>
+        <script>
             // get the feedback div element so we can do something with it.
             const feedbackElement = document.getElementById('feedback');
             // get the form element so we can read what was entered in it.
@@ -79,7 +72,7 @@
               // make the feedback element visible.
               feedbackElement.style.display = "block";
             });
-          </script>     -->
+          </script>    
     </main>
     <footer>
         
