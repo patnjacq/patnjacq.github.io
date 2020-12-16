@@ -9,6 +9,16 @@
     <meta name="description"
         content=" To inform people about our trip and plans to visit all 50 states">
     <link rel="stylesheet" href="style/style.css">
+    <script>
+        const feedbackElement = document.getElementById('feedback');
+        const formElement = document.forms[0];
+        
+        formElement.addEventListener('submit', function(e) {
+          e.preventDefault();
+          feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thanks for your message. We will email you as soon as possible at ' +formElement.user_email.value +'.';
+          feedbackElement.style.display = "block";
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -39,7 +49,7 @@
                     <p>A.  Santa Rosa, CA <br>
                         B.  Shoreline RV Park, Eureka, CA<br>
                         C. Windy Cove Park, Winchester Bay, OR<br>
-                        D.  Andersen's Oceanside RV Park, Long Beach, WA<br>
+                        D.  Andersen's Oceanside Park, Long Beach, WA<br>
                         E.  Osprey Point RV Resort, Lakeside, OR<br><br>
                     </p>
                     <h4>Sites Seen Along the Way</h4>
@@ -105,15 +115,7 @@
                 </li>
             </ul>
         </form>  
-        <script>
-            const feedbackElement = document.getElementById('feedback');
-            const formElement = document.forms[0];
-            formElement.addEventListener('submit', function(e) {
-              e.preventDefault();
-              feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thanks for your message. We will email you as soon as possible at ' +formElement.user_email.value +'.';
-              feedbackElement.style.display = "block";
-            });
-          </script>
+        
         
          </div>
     </main>

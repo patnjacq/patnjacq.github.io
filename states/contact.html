@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Family in All 50 States| Our Great and Marvelous Trip</title>
+    <meta name="description"
+        content=" To inform people about our trip and plans to visit all 50 states">
+    <link rel="stylesheet" href="style/style.css">
+    
+</head>
+<body>
+    <header>
+        <img src = "images/divide.jpg" width="200" alt = "Yancey Family">
+        <div class = barleft>
+            <h1>Our Family in </h1>
+        </div>
+        <div class = barright>
+            <h1> All 50 States</h1>
+        </div>       
+        <div class = "spacer homepage">       
+        </div>
+       
+    </header>
+    <main>
+        <div class = just-contact>
+            <ul class= navspot>
+                <li><a href="central.html"> Where We've Been</a></li>           
+                <li><a href="maps.html">  How We Got There </a></li>
+            </ul>
+        </div>
+        <div class = just-contact>
+        <form action="/my-handling-form-page" method="post">
+            <section class = contact>
+                <h3>Contact Us!</h3>
+                <p>Do you have a suggestion for our next trip?  Do you want to know more about some of our specific adventures?  Shoot us a message.  We would love to hear from you!!</p> 
+            </section>
+            <div id="feedback">
+           
+                <ul>
+                    <li>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" required name="user_name" />
+                    </li>
+                    <li>
+                        <label for="mail">E-mail:</label>
+                        <input type="email" id="mail" required name="user_email" />
+                    </li>
+                    <li>
+                        <label for="msg">Message:</label>
+                        <textarea id="msg" required name="user_message"></textarea>
+                    </li>
+                    <li >
+                        <button type="submit">Send your message</button>
+                    </li>
+                </ul>
+            </div>
+        </form>  
+            <script>
+                const feedbackElement = document.getElementById('feedback');
+                const formElement = document.forms[0];
+                formElement.addEventListener('submit', function(e) {
+                e.preventDefault();
+                feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thanks for your message. We will email you as soon as possible at ' +formElement.user_email.value +'.';
+                feedbackElement.style.display = "block";
+                });
+            </script>
+        </div>
+    
+    </main>        
+    <footer>
+        <p>Yancey Family Adventures|Jacquelyn Yancey|BYUI WDD130|<a  href="final-site-plan.html" >Site Plan</a>|<a  href="contact.html" >Contact Us</a></p>
+        
+    </footer> 
+</body>
+</html>

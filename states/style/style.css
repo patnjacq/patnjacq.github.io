@@ -34,7 +34,7 @@
 
  
  body{
-    background-color: #8A716A ;
+    background-color:var(--footer3-color) ;
     font-size: 16px;
     
  }
@@ -59,7 +59,10 @@
 }
 .maps {
     background-color: var(--footer2-color);
-    
+    padding-bottom: 1rem;
+}
+.maps img{
+    border: 1px solid var(--accent2-color);
 }
 
  h1 {
@@ -83,30 +86,40 @@
     .big {
         margin: 0 auto;
         padding: 0 2rem;
-        max-width: 100%;
-    }
+        max-width: 100%; 
+    } 
     .homepage {
         background-color: white;
         }
 
     .navspot{
-        margin-block: 0;
         padding-right: 1rem;
         margin-left: auto;
-        width: 150px;
+        width: 240px;
     }    
     .navspot a {
         color: black;
-        text-decoration: none;
+        text-decoration: underline;
+        font-size: 1.25rem;
+        text-align: right;
+        
     }
+    .homepage .navspot a:hover {
+        color: var(--accent2-color);
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-decoration: none;
+       
+    } 
     .navspot a:hover {
         color: var(--accent1-color);
         font-weight: bold;
-       
-    }    
+        font-size: 1.5rem;
+        text-decoration: none;
+    }       
     h2{
     font-size: 3rem;
-    margin: 1rem auto 1rem 1rem;
+    margin: 0 auto .5rem 1rem;
     font-family: 'Ranchers', cursive;
     font-weight: normal;
    
@@ -125,6 +138,7 @@
     .goal {
         grid-row: 1/4;
         grid-column: 1/2;
+        align-items: baseline;
 
     }
     .family {
@@ -167,7 +181,8 @@
         justify-content: space-between;
         margin: 0 2rem;
         padding: 0 2rem;
-        font-size: 1.25rem;
+        font-size: 1.5rem;
+        font-weight: bold ;
     }
     
     img{
@@ -178,7 +193,7 @@
         box-shadow: 1px 1px 4px 1px #CCC;
         border-radius: 5px;
         background-color: white; 
-        font: Helvetica sans-serif;
+       
         overflow: hidden;
         border: 3px solid var(--accent2-color);
        
@@ -192,10 +207,11 @@
     .cardholder {
        
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-gap: 2rem;
         
         margin: 0 2rem;
+        padding-bottom: 2rem;
     }
     .card p{
         padding: 0 1rem;
@@ -203,7 +219,6 @@
     }
     h3 {
         text-align: center;
-        margin-block: .5rem;
         margin-top: .5rem;
         margin-bottom: .5rem;
 
@@ -222,15 +237,19 @@
         font-size: .75rem;
         color:var(--accent1-color);
         text-decoration: none;
+        target-name:new;
+        target-new:tab;
+
     }
     form {
-        /* Center the form on the page */
         margin: 0 auto;
-        width: 400px;
-        /* Form outline */
+        width: 600px;
         padding: 1em;
         border: 1px solid #CCC;
-        border-radius: 1em;
+        display: flex;
+        background-color: var(--accent2-color) ;
+        color: white;
+       
       }
       
       ul {
@@ -244,65 +263,56 @@
       }
       
       label {
-        /* Uniform size & alignment */
         display: inline-block;
         width: 90px;
-        text-align: right;
+        text-align: left;
       }
+      .contact {
+        width: 272px;
+        padding: 0 1rem;
+
+    }
+   
       
       input, 
       textarea {
-        /* To make sure that all text fields have the same font settings
-           By default, textareas have a monospace font */
-        font: 1em sans-serif;
-        padding: 5px;  
-        /* Uniform text field size */
+        padding: .5rem;  
         width: 300px;
         box-sizing: border-box;
       
-        /* Match form field borders */
         border: 1px solid #999;
       }
       
       input:focus, 
       textarea:focus {
-        /* Additional highlight for focused elements */
         border-color: #000;
       }
       
       textarea {
-        /* Align multiline text fields with their labels */
         vertical-align: top;
-         
-        /* Provide space to type some text */
         height: 5em;
       }
       
-      .button {
-        /* Align buttons with the text fields */
-        padding-left: 90px; /* same size as the label elements */
-      }
+   
       
       button {
-        /* This extra margin represent roughly the same space as the space
-           between the labels and their text fields */
-        margin-left: .5em;
+        margin: .5rem;
       }
       
       #feedback { 
         margin: 0 auto;
         padding:10px;
-        background-color: salmon;
-        font-size: 2em; /* add styling and layout properties of your own design here as needed */
-        display: none; /* we will make the element invisible until the form is submitted successfully */
-        width: 500px;
-        padding: 1em;
-        border: 1px solid #CCC;
-        border-radius: 1em;
+        background-color: var(--accent1-color);
+        font-size: 1.2rem; 
+        display: none; 
+        width: 600px;
+        padding: 1rem;
+        border: 1px solid var(--accent2-color);
+      
     }
     .routes{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 2fr 3fr;
         grid-gap: 1rem;
         margin: 2rem;
 
@@ -310,25 +320,55 @@
     .trip1  {
         margin: 0 auto;
         padding:10px;
-        background-color: salmon;
+        background-color: white;        
         
-        width: 400px;
         padding: 1em;
-        border: 1px solid #CCC;
-        border-radius: 1em;
+        border: 1px solid var(--accent2-color);
+       
         grid-column: 2/3;
     }     
     .trip2  {
         margin: 0 auto;
         padding:10px;
-        background-color:var(--accent2-color);
-        display: flex;
+        background-color:white;
+        
         padding: 1em;
-        border: 1px solid #CCC;
-        border-radius: 1em;
-        width: 400px;
+        border: 1px solid var(--accent2-color);
+        
+        
         grid-column: 1/2;
     }   
     .trip2 p{
         padding: 1rem;
+        
     }  
+    footer p{
+        text-align: center;
+        padding: 2rem;
+        color:var(--accent2-color);
+        margin: 0 auto;
+       
+    }
+    footer a{
+        color: var(--accent2-color);
+        text-decoration: underline;
+    }
+    footer{
+         background-color: var(--primary-color);
+         
+    }
+    h4{ 
+        margin: .25rem 0;
+    }
+    .routes p{
+        padding: .25rem 0;
+        margin: 0;
+        font-size: .9rem;
+    }
+    .just-contact {
+        background-color: white;
+        padding-bottom: 2rem;
+    }
+    
+    
+
