@@ -70,7 +70,7 @@
      padding: .5rem;
      text-align: center;
      color:  var(--accent1-color);
-     font-size: 4rem;
+     font-size: 3.75rem;
      font-weight: normal;
  }
  header {
@@ -109,7 +109,13 @@
         font-weight: bold;
         font-size: 1.5rem;
         text-decoration: none;
-       
+    }
+    .just-contact .navspot a:hover {
+        color: var(--accent2-color);
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-decoration: none;
+    
     } 
     .navspot a:hover {
         color: var(--accent1-color);
