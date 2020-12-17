@@ -1,25 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Ranchers&display=swap');
 
 :root {
-  --primary-color:#80ded9;
-  --secondary-color:#aeecef;
-  --accent1-color: #007fff;
-  --accent2-color: #8a716a;
-  --accent3-color: #0d0221;
-  --heading-font: 'Poppins', sans-serif; 
-  --paragraph-font:'Roboto', sans-serif;
+  --primary-color: #396e94;
+  --accent1-color: #e8e7ff;
+  --accent2-color: #142634;
+  --footer2-color: #949396;
+  --footer3-color: #4a4a4b;
+  --heading-font: 'Ranchers', sans-serif; 
+  --paragraph-font:'Open Sans', sans-serif;
 }
     
 
 html {
-  background-color: var(--accent2-color)
+  background-color: var(--footer2-color)
 }
 
 body {
   max-width: 900px;
   margin: 0 auto;
-  ;
-  padding: 1em
+  padding: 1em;
+  background-color: white;
 }
 
 
@@ -80,8 +80,14 @@ p {
 
 .accent2 {
   background-color: var(--accent2-color)
-}
 
+}
+.footer3 {
+  background-color: var(--footer3-color)
+}
+.footer2{
+  background-color: var(--footer2-color);
+}
 nav {
   background-color: var(--accent1-color);
   line-height: 3em;
@@ -109,6 +115,6 @@ nav a:hover {
   background-color: var(--primary-color);
 }
 .colored {
-    color: var(--accent3-color);
+    color: var(--footer3-color);
     font-weight: bold;
 }
