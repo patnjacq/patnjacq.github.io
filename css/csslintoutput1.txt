@@ -1,0 +1,29 @@
+
+fixedcss.css
+  2:5   ×  Expected indentation of 2 spaces                               indentation                              
+  5:3   ×  Expected indentation of 0 spaces                               indentation                              
+  6:5   ×  Expected indentation of 2 spaces                               indentation                              
+  7:5   ×  Expected indentation of 2 spaces                               indentation                              
+  8:5   ×  Expected indentation of 2 spaces                               indentation                              
+  9:5   ×  Expected indentation of 2 spaces                               indentation                              
+ 15:5   ×  Expected indentation of 2 spaces                               indentation                              
+ 16:5   ×  Expected indentation of 2 spaces                               indentation                              
+ 20:5   ×  Expected indentation of 2 spaces                               indentation                              
+ 24:5   ×  Expected indentation of 2 spaces                               indentation                              
+ 25:5   ×  Expected indentation of 2 spaces                               indentation                              
+ 25:18  ×  Expected newline after ";" in a multi-line declaration block   declaration-block-semicolon-newline-after
+ 29:5   ×  Expected indentation of 2 spaces                               indentation                              
+ 30:5   ×  Expected indentation of 2 spaces                               indentation                              
+ 31:5   ×  Expected indentation of 2 spaces                               indentation                              
+ 32:5   ×  Expected indentation of 2 spaces                               indentation                              
+ 36:5   ×  Expected indentation of 2 spaces                               indentation                              
+ 37:5   ×  Expected indentation of 2 spaces                               indentation                              
+ 40:1   ×  Expected no more than 1 empty line                             max-empty-lines                          
+ 41:5   ×  Expected indentation of 0 spaces                               indentation                              
+ 42:9   ×  Expected indentation of 2 spaces                               indentation                              
+ 43:9   ×  Expected indentation of 2 spaces                               indentation                              
+ 44:9   ×  Expected indentation of 2 spaces                               indentation                              
+ 45:9   ×  Expected indentation of 2 spaces                               indentation                              
+ 46:5   ×  Unexpected missing end-of-source newline                       no-missing-end-of-source-newline         
+ 46:5   ×  Expected indentation of 0 spaces                               indentation
+

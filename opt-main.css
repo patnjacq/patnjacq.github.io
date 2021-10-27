@@ -1,3 +1,4 @@
+/*** uncss> filename: main.css ***/
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
 
 :root {
@@ -15,7 +16,7 @@ body {
   margin-top: 20px;
 }
 
-header, main, footer {   
+header, main {   
   margin: auto;
 }
 

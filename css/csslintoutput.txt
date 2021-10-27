@@ -1,0 +1,7 @@
+
+fixedcss.css
+  2:4   ×  Expected indentation of 2 spaces                               indentation                              
+ 25:16  ×  Expected newline after ";" in a multi-line declaration block   declaration-block-semicolon-newline-after
+ 25:16  ×  Unexpected whitespace at end of line                           no-eol-whitespace                        
+ 46:1   ×  Unexpected missing end-of-source newline                       no-missing-end-of-source-newline
+

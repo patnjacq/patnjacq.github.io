@@ -1,0 +1,72 @@
+
+main.css
+   2:1   ×  Expected empty line before rule                                                  rule-empty-line-before                       
+  10:7   ×  Expected newline after ","                                                       selector-list-comma-newline-after            
+  10:13  ×  Expected newline after ","                                                       selector-list-comma-newline-after            
+  15:21  ×  Expected "#6495ED" to be "#6495ed"                                               color-hex-case                               
+  21:16  ×  Unexpected missing generic font family                                           font-family-no-missing-generic-family-keyword
+  27:1   ×  Expected empty line before rule                                                  rule-empty-line-before                       
+  28:10  ×  Expected "#FAEBD7" to be "#faebd7"                                               color-hex-case                               
+  31:1   ×  Expected empty line before rule                                                  rule-empty-line-before                       
+  32:10  ×  Expected "#FAEBD7" to be "#faebd7"                                               color-hex-case                               
+  35:1   ×  Expected empty line before rule                                                  rule-empty-line-before                       
+  39:1   ×  Expected empty line before rule                                                  rule-empty-line-before                       
+  40:10  ×  Expected "#DEB887" to be "#deb887"                                               color-hex-case                               
+  52:1   ×  Expected empty line before rule                                                  rule-empty-line-before                       
+  55:1   ×  Expected empty line before rule                                                  rule-empty-line-before                       
+  60:1   ×  Expected empty line before rule                                                  rule-empty-line-before                       
+  61:10  ×  Expected "#FAEBD7" to be "#faebd7"                                               color-hex-case                               
+  64:1   ×  Expected empty line before rule                                                  rule-empty-line-before                       
+  65:10  ×  Expected "#FAEBD7" to be "#faebd7"                                               color-hex-case                               
+  68:1   ×  Expected empty line before rule                                                  rule-empty-line-before                       
+  72:1   ×  Expected empty line before rule                                                  rule-empty-line-before                       
+  73:10  ×  Expected "#DEB887" to be "#deb887"                                               color-hex-case                               
+  78:21  ×  Expected "#FAEBD7" to be "#faebd7"                                               color-hex-case                               
+  91:16  ×  Unexpected missing generic font family                                           font-family-no-missing-generic-family-keyword
+  95:1   ×  Expected selector "h2 a:link" to come before selector "nav ul li a:link"         no-descending-specificity                    
+  95:1   ×  Expected selector "h2 a:link" to come before selector "nav ul li a:visited"      no-descending-specificity                    
+  95:1   ×  Expected selector "h2 a:link" to come before selector "nav ul li a:hover"        no-descending-specificity                    
+  95:1   ×  Expected selector "h2 a:link" to come before selector "nav ul li a:active"       no-descending-specificity                    
+  95:1   ×  Expected empty line before rule                                                  rule-empty-line-before                       
+  99:1   ×  Expected selector "h2 a:visited" to come before selector "nav ul li a:link"      no-descending-specificity                    
+  99:1   ×  Expected selector "h2 a:visited" to come before selector "nav ul li a:visited"   no-descending-specificity                    
+  99:1   ×  Expected selector "h2 a:visited" to come before selector "nav ul li a:hover"     no-descending-specificity                    
+  99:1   ×  Expected selector "h2 a:visited" to come before selector "nav ul li a:active"    no-descending-specificity                    
+  99:1   ×  Expected empty line before rule                                                  rule-empty-line-before                       
+ 103:1   ×  Expected selector "h2 a:hover" to come before selector "nav ul li a:link"        no-descending-specificity                    
+ 103:1   ×  Expected selector "h2 a:hover" to come before selector "nav ul li a:visited"     no-descending-specificity                    
+ 103:1   ×  Expected selector "h2 a:hover" to come before selector "nav ul li a:hover"       no-descending-specificity                    
+ 103:1   ×  Expected selector "h2 a:hover" to come before selector "nav ul li a:active"      no-descending-specificity                    
+ 103:1   ×  Expected empty line before rule                                                  rule-empty-line-before                       
+ 104:10  ×  Expected "#6495ED" to be "#6495ed"                                               color-hex-case                               
+ 107:1   ×  Expected selector "h2 a:active" to come before selector "nav ul li a:link"       no-descending-specificity                    
+ 107:1   ×  Expected selector "h2 a:active" to come before selector "nav ul li a:visited"    no-descending-specificity                    
+ 107:1   ×  Expected selector "h2 a:active" to come before selector "nav ul li a:hover"      no-descending-specificity                    
+ 107:1   ×  Expected selector "h2 a:active" to come before selector "nav ul li a:active"     no-descending-specificity                    
+ 107:1   ×  Expected empty line before rule                                                  rule-empty-line-before                       
+ 108:10  ×  Expected "#DEB887" to be "#deb887"                                               color-hex-case                               
+ 115:1   ×  Expected selector "p a:link" to come before selector "nav ul li a:link"          no-descending-specificity                    
+ 115:1   ×  Expected selector "p a:link" to come before selector "nav ul li a:visited"       no-descending-specificity                    
+ 115:1   ×  Expected selector "p a:link" to come before selector "nav ul li a:hover"         no-descending-specificity                    
+ 115:1   ×  Expected selector "p a:link" to come before selector "nav ul li a:active"        no-descending-specificity                    
+ 115:1   ×  Expected empty line before rule                                                  rule-empty-line-before                       
+ 116:10  ×  Expected "#6495ED" to be "#6495ed"                                               color-hex-case                               
+ 119:1   ×  Expected selector "p a:visited" to come before selector "nav ul li a:link"       no-descending-specificity                    
+ 119:1   ×  Expected selector "p a:visited" to come before selector "nav ul li a:visited"    no-descending-specificity                    
+ 119:1   ×  Expected selector "p a:visited" to come before selector "nav ul li a:hover"      no-descending-specificity                    
+ 119:1   ×  Expected selector "p a:visited" to come before selector "nav ul li a:active"     no-descending-specificity                    
+ 119:1   ×  Expected empty line before rule                                                  rule-empty-line-before                       
+ 120:10  ×  Expected "#6495ED" to be "#6495ed"                                               color-hex-case                               
+ 123:1   ×  Expected selector "p a:hover" to come before selector "nav ul li a:link"         no-descending-specificity                    
+ 123:1   ×  Expected selector "p a:hover" to come before selector "nav ul li a:visited"      no-descending-specificity                    
+ 123:1   ×  Expected selector "p a:hover" to come before selector "nav ul li a:hover"        no-descending-specificity                    
+ 123:1   ×  Expected selector "p a:hover" to come before selector "nav ul li a:active"       no-descending-specificity                    
+ 123:1   ×  Expected empty line before rule                                                  rule-empty-line-before                       
+ 124:10  ×  Expected "#6495ED" to be "#6495ed"                                               color-hex-case                               
+ 127:1   ×  Expected selector "p a:active" to come before selector "nav ul li a:link"        no-descending-specificity                    
+ 127:1   ×  Expected selector "p a:active" to come before selector "nav ul li a:visited"     no-descending-specificity                    
+ 127:1   ×  Expected selector "p a:active" to come before selector "nav ul li a:hover"       no-descending-specificity                    
+ 127:1   ×  Expected selector "p a:active" to come before selector "nav ul li a:active"      no-descending-specificity                    
+ 127:1   ×  Expected empty line before rule                                                  rule-empty-line-before                       
+ 128:10  ×  Expected "#DEB887" to be "#deb887"                                               color-hex-case
+

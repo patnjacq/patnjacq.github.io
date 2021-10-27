@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
+// Color variables
+    $blue: #6495ED;
+    $main-background: #FAEBD7 ;
+    $active: #DEB887;
+   
+
+//general variables    
+    $heading-font: 'Lora';
+    $article-margin: 20px 25px;
+
+// mixins
+@mixin link-props($normal:$blue, $hover:$blue) {
+    a:link{
+        color: $normal;
+        text-decoration: none;
+    }
+    a:visited {
+        color:$normal;
+        text-decoration: none;
+    }
+    a:hover {
+        color:$hover;
+        text-decoration: underline;
+    }
+    a:active {
+        color:$active;
+        text-decoration: none;
+    }
+}
+
+@mixin header-right() {
+    text-align: right;
+    margin-right: 15px;
+    padding:5px;
+}
+
+
+:root{
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body{
+    background-color: black;
+    //gap:0;
+   //margin-top: 20px;
+}
+header, main, footer {   
+    margin: auto;
+    }
+header {
+        background-color: $blue; 
+        padding-bottom: 20px;
+        padding-top: 20px;     
+    }     
+
+h1 {
+    font-family: $heading-font;
+    margin-top: 2vw;
+    @include header-right();
+    @include link-props($main-background, white);
+} 
+hr{
+    margin-right: 20px;
+    margin-left: 20px;
+}
+nav{
+    margin-bottom: 20px;
+    ul {
+    list-style-type: none;
+        li{
+            @include header-right();
+            @include link-props($main-background, white );
+        }
+    }
+}
+
+main {
+    background-color: $main-background;
+    padding-top: 20px;
+}
+article {
+    background-color:white;
+    width:80%;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px;
+}
+h2{
+    font-family: $heading-font;
+    font-size: 1.75em;
+    margin: $article-margin;
+    @include link-props(black, $blue);
+}
+p {
+    margin: $article-margin;
+    @include link-props()
+}
+.post-date {
+    margin: $article-margin;
+}
+
+img {
+    display: block;
+    max-width: 70%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3em;
+}
+figure{
+    margin-left: auto;
+    margin-right: auto;
+    width:100%;
+}
+
+@media only screen and (min-width: 600px){
+
+    body div{
+        display: grid;
+        grid-template-columns: 25% 75%;
+        grid-template-rows: 100%;
+        gap:0;  
+        max-width: 960px;
+        margin:auto;
+        
+    }
+    header{
+        grid-column: 1/2;
+        height: 100%;
+        width: 100%;
+    
+    }
+    main{
+        grid-column: 2/3;
+        padding-bottom: 20px;
+        height: 100%;  
+        
+    }
+    
+   
+}

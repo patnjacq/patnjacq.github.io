@@ -1,0 +1,50 @@
+
+main.css
+  18:7   ×  Expected newline after ","                                       selector-list-comma-newline-after        
+  18:13  ×  Expected newline after ","                                       selector-list-comma-newline-after        
+  18:23  ×  Expected newline after "{" of a multi-line block                 block-opening-brace-newline-after        
+  18:25  ×  Unexpected whitespace at end of line                             no-eol-whitespace                        
+  22:3   ×  Expected newline after ","                                       selector-list-comma-newline-after        
+  30:7   ×  Expected newline after ","                                       selector-list-comma-newline-after        
+  42:2   ×  Expected newline after "}"                                       block-closing-brace-newline-after        
+  42:2   ×  Unexpected whitespace at end of line                             no-eol-whitespace                        
+  44:13  ×  Expected newline after ","                                       selector-list-comma-newline-after        
+  44:24  ×  Expected newline after ","                                       selector-list-comma-newline-after        
+  44:35  ×  Expected newline after ","                                       selector-list-comma-newline-after        
+  49:11  ×  Expected newline after ","                                       selector-list-comma-newline-after        
+  49:22  ×  Expected single space before "{"                                 block-opening-brace-space-before         
+  54:12  ×  Expected newline after ","                                       selector-list-comma-newline-after        
+  56:26  ×  Unexpected whitespace at end of line                             no-eol-whitespace                        
+  56:27  ×  Expected newline before "}" of a multi-line block                block-closing-brace-newline-before       
+  57:2   ×  Expected newline after "}"                                       block-closing-brace-newline-after        
+  57:2   ×  Unexpected whitespace at end of line                             no-eol-whitespace                        
+  64:10  ×  Expected newline after ","                                       selector-list-comma-newline-after        
+  68:10  ×  Expected single space before "{"                                 block-opening-brace-space-before         
+  73:11  ×  Expected single space before "{"                                 block-opening-brace-space-before         
+  78:2   ×  Expected single space before "{"                                 block-opening-brace-space-before         
+  81:1   ×  Expected empty line before rule                                  rule-empty-line-before                   
+  81:9   ×  Expected newline after ","                                       selector-list-comma-newline-after        
+  81:21  ×  Expected single space before "{"                                 block-opening-brace-space-before         
+  85:9   ×  Expected single space before "{"                                 block-opening-brace-space-before         
+  90:10  ×  Expected single space before "{"                                 block-opening-brace-space-before         
+  91:9   ×  Expected single space after ":" with a single-line declaration   declaration-colon-space-after            
+  96:2   ×  Expected single space before "{"                                 block-opening-brace-space-before         
+ 101:3   ×  Expected newline after ","                                       selector-list-comma-newline-after        
+ 101:6   ×  Expected single space before "{"                                 block-opening-brace-space-before         
+ 111:3   ×  Expected single space before "{"                                 block-opening-brace-space-before         
+ 116:20  ×  Expected single space after ":" with a single-line declaration   declaration-colon-space-after            
+ 123:11  ×  Expected newline after ","                                       selector-list-comma-newline-after        
+ 123:15  ×  Expected newline after ","                                       selector-list-comma-newline-after        
+ 123:17  ×  Expected single space before "{"                                 block-opening-brace-space-before         
+ 136:6   ×  Expected single space before "{"                                 block-opening-brace-space-before         
+ 142:41  ×  Expected single space before "{"                                 block-opening-brace-space-before         
+ 143:10  ×  Expected single space before "{"                                 block-opening-brace-space-before         
+ 147:12  ×  Expected newline after ";" in a multi-line declaration block     declaration-block-semicolon-newline-after
+ 147:13  ×  Unexpected whitespace at end of line                             no-eol-whitespace                        
+ 152:8   ×  Expected single space before "{"                                 block-opening-brace-space-before         
+ 157:4   ×  Unexpected whitespace at end of line                             no-eol-whitespace                        
+ 158:6   ×  Expected single space before "{"                                 block-opening-brace-space-before         
+ 161:19  ×  Unexpected whitespace at end of line                             no-eol-whitespace                        
+ 162:2   ×  Expected newline before "}" of a multi-line block                block-closing-brace-newline-before       
+ 163:1   ×  Unexpected missing end-of-source newline                         no-missing-end-of-source-newline
+
