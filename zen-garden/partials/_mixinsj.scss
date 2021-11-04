@@ -1,0 +1,70 @@
+
+// for creating the library shelf
+@mixin library($shelf-width) {
+    nav {
+           margin: auto;}
+    ul {
+     list-style: none;
+     border-bottom: 10px solid transparent;
+     height:$shelf-width*.96;
+     width: $shelf-width*.96;
+    // margin: $shelf-width*.10 auto 0;
+     margin: auto;
+     padding: 0;
+     -webkit-perspective: 2500;
+     -webkit-transform-origin: center top 0;
+     -webkit-transform: translateY(250px);
+   }
+    li {
+     width: $shelf-width*.12;
+     height: $shelf-width*.96;
+     float: left;
+     margin: 0;
+     padding: 0;
+     position: relative;
+     cursor: pointer;
+     -webkit-transform: rotateX(0deg) translateY(-250px);
+     -webkit-transform-style: preserve-3d;
+     -webkit-transition-property: transform;
+     -webkit-transition-duration: 100ms;
+   }
+   
+    a {
+     -webkit-transform-origin: 0 0 0;
+     -webkit-transform: rotateZ(90deg) translateY($shelf-width* -.12);
+     margin: 0;
+     position: absolute;
+     line-height: $shelf-width*.05;
+     width: $shelf-width*.96;
+     height: $shelf-width*.1;
+     padding: $shelf-width*.06 $shelf-width*.1;
+     box-sizing: border-box;
+   }
+   
+    li:nth-child(1) {
+     z-index: 1;
+     background-color: $color-1; }
+    li:nth-child(2) {
+     z-index: 1;
+     background-color: $color-2; }
+    li:nth-child(3) {
+     z-index: 1;
+     background-color: $color-3; }
+    li:nth-child(4) {
+     z-index: 1;
+     background-color: $color-4; }
+    li:nth-child(5) {
+     z-index: 1;
+     background-color: $color-5;}
+   
+    li:nth-child(6) {
+     z-index: 1;
+     background-color: $color-6; }
+    li:nth-child(7) {
+     z-index: 1;
+     background-color: $color-2; }
+    li:nth-child(8) {
+     z-index: 1;
+     background-color: $color-3; }
+   }
+   
