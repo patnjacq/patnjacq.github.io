@@ -1,0 +1,176 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-items: center;
+}
+
+.card {
+  border: 3px solid black;
+  height: 56vw;
+  width: 40vw;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 2px 2px 4px grey;
+}
+
+.card-front {
+  padding: 2vw;
+  background-color: pink;
+}
+
+.icon {
+  width: 8vw;
+  height: 8vw;
+}
+
+.number {
+  text-align: center;
+  font-size: 4vw;
+}
+.number > .icon {
+  width: 4vw;
+  height: 4vw;
+}
+
+.row {
+  display: grid;
+  grid-template-rows: 13vw 13vw 13vw 13vw;
+  grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.pip1 {
+  grid-area: 1/2/2/3;
+}
+
+.pip2 {
+  grid-area: 1/4/2/5;
+}
+
+.pip3 {
+  grid-area: 2/3/3/4;
+}
+
+.pip4 {
+  grid-area: 3/2/4/3;
+}
+
+.pip5 {
+  grid-area: 3/4/4/5;
+}
+
+.pip6 {
+  grid-area: 4/2/5/3;
+}
+
+.pip7 {
+  grid-area: 4/4/5/5;
+}
+
+.bottom {
+  grid-area: 4/5;
+}
+
+@supports (display: grid) {
+  /* -------------------------------- 
+
+  grid layout for flexbox style
+
+  -------------------------------- */
+  .col-1 {
+    flex: 0 0 12.5%;
+  }
+
+  .col-2 {
+    flex: 0 0 25%;
+  }
+
+  .col-3 {
+    flex: 0 0 37.5%;
+  }
+
+  .col-4 {
+    flex: 0 0 50%;
+  }
+
+  .col-5 {
+    flex: 0 0 62.5%;
+  }
+
+  .col-6 {
+    flex: 0 0 75%;
+  }
+
+  .col-7 {
+    flex: 0 0 87.5%;
+  }
+
+  .col-8 {
+    flex: 0 0 100%;
+  }
+
+  .offset1 {
+    margin-left: 12.5%;
+  }
+
+  .offset2 {
+    margin-left: 25%;
+  }
+
+  .offset3 {
+    margin-left: 37.5%;
+  }
+
+  .offset4 {
+    margin-left: 50%;
+  }
+
+  .offset5 {
+    margin-left: 62.5%;
+  }
+
+  .offset6 {
+    margin-left: 75%;
+  }
+
+  .offset7 {
+    margin-left: 87.5%;
+  }
+
+  .offset8 {
+    margin-left: 100%;
+  }
+
+  *,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .card {
+    background-color: aqua;
+  }
+
+  .row {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: space-between;
+    height: 100%;
+  }
+
+  .cell {
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=gridstyle.css.map */

@@ -1,0 +1,54 @@
+@import 'grid-layout-partial.scss';
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+.card-front {
+    padding: .5em;
+}
+//set icon size
+.icon {
+    width: 8vw;
+    height: 8vw;
+}
+
+.number {
+    font-size: 4vw;
+  //an icon that is part of a number should be half the normal size
+    & > .icon {
+        width: 4vw;
+        height: 4vw;
+    }
+}
+
+//rotate bottom pips 180deg
+.rotate {
+    transform: rotate(180deg);
+}
+
+.card {
+  border: 3px solid black;
+  border-radius: 10px;
+  margin: 20px;
+  height: 56vw;
+  width: 40vw;
+  background-color: aqua;
+
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  align-content: space-between;
+  height: 100%
+}
+
+.cell {
+  text-align: center;
+}

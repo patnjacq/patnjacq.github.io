@@ -1,0 +1,120 @@
+/* -------------------------------- 
+
+grid layout for flexbox style
+
+-------------------------------- */
+.col-1 {
+  flex: 0 0 12.5%;
+}
+
+.col-2 {
+  flex: 0 0 25%;
+}
+
+.col-3 {
+  flex: 0 0 37.5%;
+}
+
+.col-4 {
+  flex: 0 0 50%;
+}
+
+.col-5 {
+  flex: 0 0 62.5%;
+}
+
+.col-6 {
+  flex: 0 0 75%;
+}
+
+.col-7 {
+  flex: 0 0 87.5%;
+}
+
+.col-8 {
+  flex: 0 0 100%;
+}
+
+.offset1 {
+  margin-left: 12.5%;
+}
+
+.offset2 {
+  margin-left: 25%;
+}
+
+.offset3 {
+  margin-left: 37.5%;
+}
+
+.offset4 {
+  margin-left: 50%;
+}
+
+.offset5 {
+  margin-left: 62.5%;
+}
+
+.offset6 {
+  margin-left: 75%;
+}
+
+.offset7 {
+  margin-left: 87.5%;
+}
+
+.offset8 {
+  margin-left: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.card-front {
+  padding: 0.5em;
+}
+
+.icon {
+  width: 8vw;
+  height: 8vw;
+}
+
+.number {
+  font-size: 4vw;
+}
+.number > .icon {
+  width: 4vw;
+  height: 4vw;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.card {
+  border: 3px solid black;
+  border-radius: 10px;
+  margin: 20px;
+  height: 56vw;
+  width: 40vw;
+  background-color: aqua;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  align-content: space-between;
+  height: 100%;
+}
+
+.cell {
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */
