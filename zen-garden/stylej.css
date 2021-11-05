@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Coming+Soon&family=Fredericka+the+Great&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Coming Soon", sans-serif;
   font-size: 12px;
-  max-width: 1500px;
+  max-width: 1100px;
   margin: auto;
 }
 
@@ -58,6 +62,18 @@ p {
   margin: auto;
 }
 
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.design-selection {
+  grid-column: 1/3;
+  border-top: 0.25em solid #2B4162;
+  border-left: 0.25em solid #2B4162;
+  border-right: 0.25em solid #2B4162;
+  margin: 2em 0 0 0;
+}
 .design-selection nav {
   margin: auto;
 }
@@ -129,6 +145,28 @@ p {
   background-color: #FE9000;
 }
 
+.design-archives {
+  border: 0.25em solid #2B4162;
+}
+
+.design-archives ul {
+  max-width: 100%;
+  margin: 2em;
+  padding: 3.5em 0;
+  background-color: #247BA0;
+}
+
+.design-archives li {
+  text-align: center;
+  list-style: none;
+}
+
+.zen-resources {
+  border-top: 0.25em solid #2B4162;
+  border-bottom: 0.25em solid #2B4162;
+  border-right: 0.25em solid #2B4162;
+}
+
 @media only screen and (min-width: 550px) {
   body {
     font-size: 16px;
@@ -151,6 +189,7 @@ p {
   .page-wrapper {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    gap: 1em;
   }
 
   .main {
@@ -159,11 +198,19 @@ p {
 
   aside {
     grid-column: 2/3;
-    margin: 0.5em;
+  }
+
+  .wrapper {
+    border: 0.25em solid #2B4162;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    display: block;
   }
 
   .design-selection {
     font-size: 12px;
+    border: 0.25em solid transparent;
+    margin: 1em;
   }
   .design-selection nav {
     margin: auto;
@@ -171,8 +218,8 @@ p {
   .design-selection ul {
     list-style: none;
     border-bottom: 10px solid transparent;
-    height: 31.968vw;
-    width: 31.968vw;
+    height: 26.88vw;
+    width: 26.88vw;
     margin: auto;
     padding: 0;
     -webkit-perspective: 2500;
@@ -180,8 +227,8 @@ p {
     -webkit-transform: translateY(250px);
   }
   .design-selection li {
-    width: 3.996vw;
-    height: 31.968vw;
+    width: 3.36vw;
+    height: 26.88vw;
     float: left;
     margin: 0;
     padding: 0;
@@ -194,13 +241,13 @@ p {
   }
   .design-selection a {
     -webkit-transform-origin: 0 0 0;
-    -webkit-transform: rotateZ(90deg) translateY(-3.996vw);
+    -webkit-transform: rotateZ(90deg) translateY(-3.36vw);
     margin: 0;
     position: absolute;
-    line-height: 1.665vw;
-    width: 31.968vw;
-    height: 3.33vw;
-    padding: 1.998vw 3.33vw;
+    line-height: 1.4vw;
+    width: 26.88vw;
+    height: 2.8vw;
+    padding: 1.68vw 2.8vw;
     box-sizing: border-box;
   }
   .design-selection li:nth-child(1) {
@@ -236,8 +283,13 @@ p {
     background-color: #FE9000;
   }
 
-  h3 {
+  .design-selection h3 {
     font-size: 19px;
+  }
+
+  .design-archives, .zen-resources {
+    border: 0.25em solid #2B4162;
+    margin: 1em;
   }
 
   .explanation h3::after {
