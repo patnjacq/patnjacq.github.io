@@ -1,3 +1,67 @@
+.col-1 {
+  flex: 0 0 12.5%;
+}
+
+.col-2 {
+  flex: 0 0 25%;
+}
+
+.col-3 {
+  flex: 0 0 37.5%;
+}
+
+.col-4 {
+  flex: 0 0 50%;
+}
+
+.col-5 {
+  flex: 0 0 62.5%;
+}
+
+.col-6 {
+  flex: 0 0 75%;
+}
+
+.col-7 {
+  flex: 0 0 87.5%;
+}
+
+.col-8 {
+  flex: 0 0 100%;
+}
+
+.offset1 {
+  margin-left: 12.5%;
+}
+
+.offset2 {
+  margin-left: 25%;
+}
+
+.offset3 {
+  margin-left: 37.5%;
+}
+
+.offset4 {
+  margin-left: 50%;
+}
+
+.offset5 {
+  margin-left: 62.5%;
+}
+
+.offset6 {
+  margin-left: 75%;
+}
+
+.offset7 {
+  margin-left: 87.5%;
+}
+
+.offset8 {
+  margin-left: 100%;
+}
+
 *,
 *:before,
 *:after {
@@ -78,84 +142,7 @@
   grid-area: 4/5;
 }
 
-@supports (display: grid) {
-  /* -------------------------------- 
-
-  grid layout for flexbox style
-
-  -------------------------------- */
-  .col-1 {
-    flex: 0 0 12.5%;
-  }
-
-  .col-2 {
-    flex: 0 0 25%;
-  }
-
-  .col-3 {
-    flex: 0 0 37.5%;
-  }
-
-  .col-4 {
-    flex: 0 0 50%;
-  }
-
-  .col-5 {
-    flex: 0 0 62.5%;
-  }
-
-  .col-6 {
-    flex: 0 0 75%;
-  }
-
-  .col-7 {
-    flex: 0 0 87.5%;
-  }
-
-  .col-8 {
-    flex: 0 0 100%;
-  }
-
-  .offset1 {
-    margin-left: 12.5%;
-  }
-
-  .offset2 {
-    margin-left: 25%;
-  }
-
-  .offset3 {
-    margin-left: 37.5%;
-  }
-
-  .offset4 {
-    margin-left: 50%;
-  }
-
-  .offset5 {
-    margin-left: 62.5%;
-  }
-
-  .offset6 {
-    margin-left: 75%;
-  }
-
-  .offset7 {
-    margin-left: 87.5%;
-  }
-
-  .offset8 {
-    margin-left: 100%;
-  }
-
-  *,
-*:before,
-*:after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
+@supports not (display: grid) {
   .card {
     background-color: aqua;
   }

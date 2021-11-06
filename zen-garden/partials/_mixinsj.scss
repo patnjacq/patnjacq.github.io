@@ -1,3 +1,12 @@
+//create a square in a pseudo class
+@mixin pseudo-box($content:"", $width: $width-constant){
+  content: "";    
+  background-color: $color-3;
+  width: $width;
+  height: $width;
+  float: left;
+}
+
 
 // for creating the library shelf
 @mixin library($shelf-width) {
@@ -42,28 +51,28 @@
    }
    
     li:nth-child(1) {
-     z-index: 1;
-     background-color: $color-1; }
+     background-color: $color-1; 
+    }
     li:nth-child(2) {
-     z-index: 1;
-     background-color: $color-2; }
+     background-color: $color-2; 
+    }
     li:nth-child(3) {
-     z-index: 1;
-     background-color: $color-3; }
+     background-color: $color-3; 
+    }
     li:nth-child(4) {
-     z-index: 1;
-     background-color: $color-4; }
+     background-color: $color-4;
+     }
     li:nth-child(5) {
-     z-index: 1;
-     background-color: $color-5;}   
+     background-color: $color-5;
+    }   
     li:nth-child(6) {
-     z-index: 1;
-     background-color: $color-6; }
+     background-color: $color-6;
+     }
     li:nth-child(7) {
-     z-index: 1;
-     background-color: $color-2; }
+     background-color: $color-2; 
+    }
     li:nth-child(8) {
-     z-index: 1;
-     background-color: $color-3; }
+     background-color: $color-3; 
+    }
    }
    
