@@ -1,0 +1,24 @@
+.summary {
+  & p:nth-child(1) {
+    //Setting the color to transparent and the font-size to 1px is how I'm making this "disappear" while still being able to be read by a screen reader (the svg image that was inserted says everything for someone who can see)
+   color: transparent;
+   font-size: 1px;
+   &::before {
+     content: url(assets/erased-board1.svg);
+   }
+   &::after {
+     content: url(assets/summary.svg);
+   }
+   }
+  & p:nth-child(2) {
+    text-align: center;
+    opacity: 0.8;
+  }
+  & abbr {
+    display: none;
+  }
+  & a {
+    font-size: 1.5em;
+    font-family: $header-font;
+  }
+}

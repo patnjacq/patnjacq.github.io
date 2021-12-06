@@ -1,0 +1,12 @@
+/*Added this to get our A to Zen banner*/
+header::before {
+  content: url(assets/header.svg);
+}
+
+h1,
+h2,
+h2 abbr {
+  //Setting the color to transparent and the font-size to 1px is how I'm making this "disappear" while still being able to be read by a screen reader (the svg image that was inserted says everything for someone who can see)
+  color: transparent;
+  font-size: 1px;
+}

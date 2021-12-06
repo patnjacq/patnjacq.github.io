@@ -1,0 +1,119 @@
+//imported fonts: Fredericka the Great & Gloria Hallelujah
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Gloria+Hallelujah&display=swap');
+
+//color variables
+$color-1: #2B4162; //indigo dye
+$color-2: #247BA0; // celedon blue
+$color-3: #FE9000; // yellow orange color wheel
+$color-4: #F04819; // coquelicot
+$color-5: #333333; // jet
+$color-6: #ffffff; // white
+
+//font variables
+$main-font: "Gloria Hallelujah", Helvetica, sans-serif;
+$header-font: "Fredericka the Great", Georgia, serif;
+
+//breakpoints
+$small: 480px;
+$medium: 760px;
+$large: 1024px;
+$x-large: 1440px;
+
+@mixin breakpoint($break) {
+  @media only screen and (min-width: $break) {
+    @content;
+  }
+}
+
+/*keyframes*/
+@keyframes slideLeft {
+  0% {
+    transform: translateX(125%);
+  }
+
+  80% {
+    tranform: translateX(-10%);
+  }
+
+  100% {
+      transform: translateX(0%);
+  }
+}
+
+//general page settings
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  color: $color-6;
+  font-family: $main-font;
+  font-size: 16px;
+  @include breakpoint($medium) {
+    font-size: 18px;
+  }
+  @include breakpoint($large) {
+    font-size: 20px;
+  }
+  @include breakpoint($x-large) {
+    font-size: 24px;
+  }
+}
+
+html,
+body {
+  margin: 0 auto;
+}
+
+body {
+  background-color: $color-5;
+}
+.page-wrapper{
+  width:100%;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+h3 {
+  margin: 1vw;
+  font-family: $header-font;
+  font-size: 2.2em;
+  font-weight: normal;
+}
+
+@media only screen and (min-width: 900px){
+  
+  .page-wrapper{
+   width: 900px;
+   margin:0 auto;
+    
+  }
+}
+ 
+
+.preamble,
+.explanation,
+.participation,
+.benefits,
+.requirements,
+footer,
+.zen-resources {
+  padding: 2vw;
+}
+
+//scss partial imports
+@import 'header';
+@import 'summary';
+@import 'preamble';
+@import 'explanation';
+@import 'participation';
+@import 'benefits';
+@import 'requirements';
+@import 'footer';
+@import 'design-selection';
+@import 'design-archives';
+@import 'zen-resources';
+@import 'library';
+
+
+
+

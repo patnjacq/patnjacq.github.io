@@ -1,0 +1,6 @@
+.requirements h3::before {
+  content: url(assets/requirements.svg);
+}
+.requirements::after {
+  content: url(assets/erased-board2.svg);
+}
