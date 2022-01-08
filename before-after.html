@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            :hover condition for a:before
+            and a:after 
+        </title>
+         
+        <style>
+            a:hover::before {
+                content: "Before -";
+                background-color: green;
+            }
+            a:hover::after{
+                content: "-after";
+                background-color: green;
+            }
+        </style>
+    </head>
+     
+    <body>
+        <a href="#" > GeeksForGeeks </a>
+    </body>
+</html>
