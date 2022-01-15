@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+  <title>Teams</title>
+  <script >
+      function io
+      function display(){
+          let txt = document.getElementById("someInput").value;
+          document.getElementById('results').innerHTML = txt;
+      }
+      function sumDown(){
+          let num = parseInt(document.getElementById('someNumber').value);
+          let total = 0
+          while (num > 0) {
+              total += num;
+              num --
+          }
+          document.getElementById('results').innerHTML = total;
+      }
+  </script>    
+  <style>
+    
+
+  </style>
+</head>
+
+<body>
+   <input id = "someInput">
+   <button onClick = "display()"> display</button>
+   <input type = 'number' id = "someNumber">
+   <button onClick = "sumDown()"> sum</button>
+    <div id='results'></div>
+</body>
+</html>
