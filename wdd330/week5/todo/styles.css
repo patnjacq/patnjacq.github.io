@@ -1,0 +1,46 @@
+
+
+
+
+
+ *{
+     margin: 1em;
+    }
+ body{
+    font-size: 16px;
+    font-family:Arial, Helvetica, sans-serif;
+ }   
+
+ textarea{
+     width:800px;
+     height: 250px;
+         background-color: lightyellow;
+ }
+
+#todoItem{
+    border: 1px solid black;
+    display: flex;
+}
+.box {
+    border: 1px solid black;
+    width: 2em;
+    height: 2em;
+    justify-content: center;
+}
+.box:hover{
+    background-color:fuchsia;
+}
+
+.check{
+    border:1px solid black;
+    background-color: gold; 
+    width: 1.5em;
+    height: 1.5em;
+    justify-content: center;
+
+    text-align: center;
+    margin:0;
+    padding:0;
+    font-size: 1.25em;
+
+}
