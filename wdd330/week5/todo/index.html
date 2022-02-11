@@ -15,36 +15,21 @@
     
     <div>
         <ul id = 'todoList' class = listOfTHings></ul>
-     <!--    <li>
-            <div id = 'todoItem'> 
-                <div class = 'box'>
-                   
-                </div>
-                <p id = "text">swim</p>
-                <p id = 'delete'>X</p>
-
-            </div>
-        </li>  -->
+   
 
     </div>
+    <button class = 'set'  value = "all">all</button>
+    <button class = 'set' value = "active">active</button>
+    <button class = 'set'value = "completed">completed</button>
 
 
     <div>
     <input id="listItem"> </input>
     <button onclick="createItem()">+</button>
-    </div>
+    </div>   
+
+
     <script src='main.js'></script>
-
-
-    <div id = 'todoItem'> 
-        <div class = 'box'>
-            <p class = 'check'>X</p>
-           
-        </div>
-        <p id = "text">swim</p>
-        <button class = 'delete' onClick ="deleteItem()" > X </button>
-
-    </div>
 </body>
 
 </html>

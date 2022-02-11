@@ -7,13 +7,9 @@
 
 //Create Object TodoObj
     const TodoObj = function(name){
-        this.id = getId();
         this.name = name;
-        this.checked = false;       
-        }
-
-      
-        
+        this.checked = false;
+    }
 
 
 // create the html for the <ul> and place it in the innerHTML
@@ -45,35 +41,33 @@
         console.log(obj.name);
 
     
-        let txt = `<div id = 'todoItem' class = `+obj.id+ `> `
+        let txt = `<div id = 'todoItem'> `
         txt += addBox(obj);
         txt += addText(obj);
-        txt += addDeleteButton(obj);
+        txt += addDeleteButton();
         txt += `</div> `
         return txt;    
     }
 
-    
  
 
     
     
 //retrieve the string stored in local storage. Parse string into array of obj, return array
     function getList(){
-       var str = localStorage.getItem("savedList");
+       var str = localStorage.getItem("savedList1");
        //console.log('str is null', (str==null))
        //console.log('str is not null', (!(str==null)))
        if(!(str==null) ){
            listOfTodos = JSON.parse(str);
        } 
-       console.log(listOfTodos);
        return listOfTodos;  
     }
 
 //stringify array of obj, save string in local storage.
     function saveList(){
         const jsonList = JSON.stringify(listOfTodos);
-       localStorage.setItem("savedList", jsonList);
+       localStorage.setItem("savedList1", jsonList);
     }
 
 // get input, instantiate new TodoObj, reset input value, add object to array, save new array, show new array   
@@ -84,22 +78,29 @@
        document.getElementById('listItem').value = '';
        listOfTodos.push(newObj);
        saveList();
+       //console.log(listOfTodos);
        showList();
     }
 // html for delete button     
-    function addDeleteButton(obj){
-      let btn = `<button class = 'delete'  name = '`+obj.id+`'  > X </button>`;
+    function addDeleteButton(){
+        //let btn = `<div class = 'delete' onClick ="deleteItem()" > X </div>`
+      let btn = `<button class = 'delete'  > X </button>`;
         return btn;
         
         
     }
- 
+    // 
+    function deleteItem(e){
+        console.log('delete item');
+        console.log(e)
+    }
+
     function addBox(obj){
         let txt = "<div"
         if (obj.checked == true){
-            txt +=` class = 'box check' title = '`+obj.id+`'>x</div>`;}
+            txt +=` class = 'box check'>x</div>`;}
         else{
-            txt+= ` class = 'box' title = '`+obj.id+`'></div>`;
+            txt+= ` class = 'box'></div>`;
         }   
         return txt;
 
@@ -114,48 +115,11 @@
         return txt;    
     }
 
-    function updateChecked(e){      
-        let objId =parseInt(e.target.title);        
-        let objList = getList();
-        let index = objList.findIndex((obj) => obj.id === objId);
-        let toggle =!(objList[index].checked);
-        objList[index].checked = toggle;
-        saveList();
-        showList();
+    function updateChecked(e){
+        console.log(e)
     }
     
-    
-    function getId(){
-        let newx = 0;
-        let x = parseInt(localStorage.getItem("uniqueId"));
-        if (x==null){
-            newx = 1}
-        else {
-            newx = x + 1;
-        }  
-        localStorage.setItem("uniqueId", newx);
-        return newx;
-    }
-
-   // 
-   function getObjId(e){
-       console.log(e.target)
-        return objId =parseInt(e.target.name);
-        
-        
-    }
    
-    function deleteItem(e) {  
-        let objId =parseInt(e.target.name); 
-        console.log(e.target.name)    
-        let objList = getList();
-        let index = objList.findIndex((obj) => obj.id === objId);
-
-        objList.splice(index, 1);
-        saveList();
-        showList();
-
-    }       
    
     
     

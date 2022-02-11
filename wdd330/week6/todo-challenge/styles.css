@@ -1,0 +1,150 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Poppins:wght@300&family=Ranchers&display=swap');
+
+:root{
+    --screen: #C59FC9;
+    --color1: #A4DEF9;
+    --color2: #C1E0F7;
+    --color3: #97F9F9;
+    --color4: #CFBAE1;
+    --color5: #474747;
+    --hover: #DBEDFA;
+    
+
+    --mainfont: 'Poppins', sans-serif;
+    --headfont:  'Ranchers', cursive;
+}
+
+
+ body{
+    font-size: 16px;
+    font-family:var(--mainfont);
+    background-color: var(--screen);
+ }  
+ 
+ main{
+     max-width:400px;
+     margin: auto;
+     background-color: var(--color3);
+     height: 100vw;
+
+ }
+ h1{
+     font-family:var(--headfont);
+     text-align: center;
+     padding: .5em 0 0 0;
+     margin: 0;
+     font-weight: 500;
+ }
+ ul{
+     padding: 0 1em;
+ }
+
+
+
+#todoItem{
+    border: 1px solid black;
+    display: flex;
+    background-color: var(--color1);
+    font-weight: 600;
+
+}
+#todoItem.true{
+    background-color: var(--color2);
+    font-weight: 100;
+    color:#474747;
+
+  
+}
+p{
+    margin: auto auto auto .5em;
+}
+.box {
+    border: 1px solid black;
+    width: 2em;
+    height: 2em;
+    justify-content: center;
+    margin:1em;
+    background-color: var(--color2);
+}
+.box:hover{
+    border:3px solid black;
+}
+
+.check{
+    border:1px solid black;
+    margin: .25em 1em;
+    background-color: var(--color2);
+
+    
+    width: 1.5em;
+    height: 1.5em;
+    justify-content: center;
+    text-align: center;
+    padding:0;
+    font-size: 1.25em;
+    
+
+}
+
+.delete{
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    margin: auto 1em auto auto;
+    border: 0;
+    background-color: transparent;
+    
+}
+.delete:hover{
+    width: max-content;
+    border: 1px solid black;
+    background-color:var(--hover);
+    font-size: 1em; 
+    margin: auto 1em auto auto;
+}
+.always{
+    border:5px solid #97F9F9;
+    background-color: var(--color3);
+    width: 100%;
+    max-width: 390px;
+    margin: auto;
+    position: fixed;
+    bottom:0;
+    
+}
+.btnstuff{
+    display: flex;
+    margin: .25em .75em;
+}
+.add {
+    max-width:380px;
+    width:100%;
+
+    
+}
+input{
+    width: 80%;
+    height:2em;
+    margin-left: .75em;
+    padding:.5em;
+    
+}
+
+#createNew{
+    padding:0;
+    width: .75em;
+    bottom: 0;  
+    font-size: 50px;
+    color:#474747;
+    line-height: 60%;
+}
+.setChoice{
+    font-family: var(--mainfont);
+    background-color: var(--color4);
+    padding:.5em 1em;
+    margin:0 .5em;
+}
+#left{
+    padding: .35em 0;
+}
