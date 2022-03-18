@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Happy+Monkey&family=Henny+Penny&family=Poppins:wght@300&family=Ranchers&display=swap');
+
+:root{
+    
+    --color1: #2B4162;
+    --color2: #247BA0;
+    --color3: #FF950A;
+    --color4: #F04819;
+    --color5: #333333;
+    --hover: #DBEDFA;
+    
+
+    --mainfont:  'Happy Monkey', cursive;
+    --headfont: 'Bangers', cursive;
+}
+
+p {
+    font-family: var(--mainfont);
+    font-size: 20px;
+    font-weight: bold;
+    margin: auto;
+    text-align: center;
+
+
+}
+.alphaside{
+    width: 115px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px;
+}
+.box {
+    width: 25px;
+    height: 25px;
+    border: 2px solid var(--color3);
+    justify-content: center;
+
+
+}
+
+.grayed {
+    background-color: var(--color5);
+    border: 2px solid var(--color2);
+
+}
+.grayed p{
+    color: var(--color2);
+
+}
+.highlight{
+    background-color: var(--color4);
+    border-radius: 50%;
+}
