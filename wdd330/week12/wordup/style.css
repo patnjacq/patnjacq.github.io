@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Happy+Monkey&family=Henny+Penny&family=Poppins:wght@300&family=Ranchers&display=swap');
+
+:root{
+    
+    --color1: #2B4162;
+    --color2: #247BA0;
+    --color3: #FF950A;
+    --color4: #F04819;
+    --color5: #333333;
+    --hover: #DBEDFA;
+    
+
+    --mainfont:  'Happy Monkey', cursive;
+    --headfont: 'Bangers', cursive;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:1vw;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+p {
+    font-family: var(--mainfont);
+    font-size: 10vw;
+    font-weight: bold;
+    margin: auto;
+    text-align: center;
+
+
+
+}
+li{
+    display: flex;
+}
+.left{
+    margin: 0 auto 0 0;
+}
+.right {
+    margin: 0 0 0 auto;
+}
+.alphaside{
+    width: 50vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: .5vw;
+}
+.box {
+    width: 12.5vw;
+    height: 12.5vw;
+    border: 2px solid var(--color3);
+    border-radius: 50%;
+    justify-content: center;
+
+
+}
+
+.grayed {
+    background-color: var(--color5);
+    border: 2px solid var(--color2);
+
+}
+.grayed p{
+    color: var(--color2);
+
+}
+.highlight{
+    background-color: var(--color3);
+    border-radius: 5%;
+    
+}
+
+.highlight p{
+    color:#F04819;
+}
+footer p {
+    font-size: 2vw;
+    position: fixed;
+    bottom: 1px;}
+#output{
+    font-size: 8vw;
+    width:15vw;
+    background-color: var(--color4);
+    transition: all 2s ease;
+    border: .4rem solid black;
+  border-radius: .5rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem .5rem;
+  text-align: center;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  text-shadow: 0 0 .5rem black;
+}
+
+@keyframes mymove {
+    0%   { background: var(--color4); width: 100px;}
+    100% {top: 200px; background:var(--color3); width: 300px;}
+  }
+
+#output.winner {
+   transform: scale(5) translateX();
+
+}
