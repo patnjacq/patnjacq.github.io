@@ -2,7 +2,7 @@ import saveList from "./saveStorage.js";
 import getSavedList from './getStorage.js';
 
 let guessedWords = [];
-const theWord = 'desk'
+
 const outputDiv = document.getElementById('output')
 const wordURl = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 const gameList = "game1";
@@ -10,12 +10,20 @@ const Word = function(newGuess, _score) {
     this.name = newGuess,
     this.score = _score
 };
+let k = 0
+const words=['desk', 'mail', 'jinx', 'taco', 'past', 'kind', 'swim', 'bunk', 'fish', 'veto', 'quit', 'wimp' ];
+let theWord = 'desk';
 
 export default function newWord(newg){
     //let newg = document.getElementById('newguess').value ;
     if (newg==true){
         console.log('NEW')
         guessedWords = []; 
+        ++k;
+       
+        designateTheWord();
+        console.log('k='+k);
+        localStorage.setItem('gameCounter', k);
         saveList(guessedWords, gameList);
         document.getElementById('wordlist').innerHTML = makeLi();
         document.getElementById('output').innerHTML = '';
@@ -27,13 +35,21 @@ export default function newWord(newg){
     if( newGuess == theWord){
         let num = guessedWords.length + 1
         let txt = "Congratulations you guessed the word " + theWord + " in " + num + " guesses!";
+        txt += "<button id = 'close-btn' class = 'close' > close </button>";
         outputDiv.innerHTML = txt;
-        outputDiv.classList.add('winner')
+        outputDiv.classList.add('winner');
+        document.getElementById('close-btn').addEventListener('click', close)
+
+
 
     }
     if (checkLength(newGuess)) {
         realWord(newGuess);}
 }}
+
+function close(){
+    outputDiv.classList.remove('winner')
+}
 
 function makeLi(){
     let len = guessedWords.length;
@@ -88,7 +104,7 @@ function makeLi(){
         document.getElementById('output').innerHTML = txt;}
 
      })
-    .then( response => response.text() )
+    
      }
 
  function score(x, y){
@@ -102,18 +118,20 @@ function makeLi(){
     tst.forEach(a => {if(y.search(a)> -1){ ++k}});
     return k; 
  }
-//  function getSavedList(storeName){
-//     var str = localStorage.getItem(storeName);
-//     let parsedArray = [];
-//     if(!(str==null) ){
-//          parsedArray = JSON.parse(str);
-//     } 
-//     console.log("json", str)
-//     return parsedArray; 
-// }
 
+function designateTheWord(){    
+    theWord = words[k];
+    console.log('theWord is ' + theWord);
+
+}
 
  function setWordList(storedName){
+    var num = localStorage.getItem('gameCounter');
+    console.log('retrieved' + k);
+    if(!(num==null) ){
+        k=num;
+   } 
+     designateTheWord();
      guessedWords = getSavedList(storedName);
      document.getElementById('wordlist').innerHTML = makeLi();
  }
