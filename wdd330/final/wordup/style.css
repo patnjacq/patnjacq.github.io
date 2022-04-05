@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Happy+Monkey&family=Henny+Penny&family=Poppins:wght@300&family=Ranchers&display=swap');
+
+:root{
+    
+    --color1: #2B4162;
+    --color2: #247BA0;
+    --color3: #FF950A;
+    --color4: #F04819;
+    --color6: #585858;
+    --color5: #333333;
+    --hover: #DBEDFA;
+    
+
+    --mainfont:  'Happy Monkey', cursive;
+    --headfont: 'Bangers', cursive;
+}
+* {
+    box-sizing: border-box;
+    
+}
+h1{
+    font-size: 10vw;
+    font-family: var(--mainfont);
+    font-weight: bolder;
+}
+body { 
+    background-color: var(--color6);
+
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:1vw;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin-left: 50px;
+}
+
+p {
+    font-family: var(--mainfont);
+    font-size: 8vw;
+    font-weight: bold;
+    margin: auto;
+    text-align: center;
+
+
+
+}
+span{
+    border: 5px solid var(--color3);
+    border-radius: 10px;
+    color:var(--color2);
+    margin-left: .5vw;
+}
+li{
+    display: flex;
+    margin-bottom: 1vw;
+}
+.left{
+    margin: 0 auto 0 0;
+}
+.right {
+    margin: 0 50px 0 auto;
+    border: 5px solid var(--color3);
+    border-radius: 10px;
+    width: 10vw;
+    color: var(--color2)
+}
+.alphaside{
+    width: 50vw;
+    max-height: 91vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: .5vw;
+    margin-right: 5vw;
+}
+.box {
+    width: 12.5vw;
+    height: 12.5vw;
+    border: 2px solid var(--color3);
+    border-radius: 50%;
+    justify-content: center;
+
+
+}
+#newGame{
+    grid-column: 3/5; 
+    border: 15px solid color2;
+    border-radius: 20px;
+    background-color: var(--color2);
+    font-size: 4vw;
+
+  }
+
+.grayed {
+    background-color: var(--color5);
+    border: 2px solid var(--color6);
+
+}
+.grayed p{
+    color: var(--color6);
+
+}
+.highlight{
+    background-color: var(--color3);
+    border-radius: 5%;
+    
+}
+
+.highlight p{
+    color:#F04819;
+}
+.guess { 
+    margin: 0 auto;
+    position: fixed;
+    bottom: 5px;
+}
+#newguess{
+    margin-left: 3vw;
+    font-family: var(--mainfont);
+    font-size: 8vw;
+    height: 12vw;
+    width: 75vw
+
+}
+#enter{
+    height: 12vw;
+    font-size: 8vw;
+    font-family: var(--mainfont);
+}
+.msg{
+    display: none;
+    font-size: 6vw;
+    font-family: var(--mainfont);    
+    background-color: var(--color4);
+    transition: all 2s ease;
+    border: .4rem solid black;
+    border-radius: .5rem;
+    margin: 1rem;
+    
+    padding: 1rem .5rem;
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    text-shadow: 0 0 .5rem black;
+}
+.close{
+    font-size: 5vw;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 0 10px
+}
+
+@keyframes mymove {
+    0%   { background: var(--color4); width: 100px;}
+    100% {top: 200px; background:var(--color3); width: 300px;}
+  }
+
+.winner {
+   font-family: var(--mainfont);
+   display: block;
+   width: 85vw;
+   margin:auto auto 20vw;
+   background-color: var(--color1);   
+   font-size: 10vw;
+   transition: all 2s ease;   
+   animation: rotation 3s 1;
+}
+.showit{
+    display: block;
+}
+
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+        background-color: var(--color2);
+    }
+    to {
+        transform: rotate(359deg);
+        background-color: var(--color1);
+    }
+}
