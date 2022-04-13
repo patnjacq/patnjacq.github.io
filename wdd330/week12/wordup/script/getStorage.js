@@ -4,6 +4,7 @@ export default function getSavedList(storeName){
     if(!(str==null) ){
          parsedArray = JSON.parse(str);
     } 
-    console.log("json", str)
     return parsedArray; 
 }
+
+console.log('hello');

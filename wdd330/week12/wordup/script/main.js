@@ -1,9 +1,9 @@
 //import AbcBox from "./boxes.js";
-import newWord from "./guesses.js"
+import newWord, { updateLetterColors } from "./guesses.js"
 import saveList from "./saveStorage.js";
 import getSavedList from './getStorage.js';
 
-
+const alphaStorage = 'alpha';
 const abc = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i',
 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'] ;
 let letterObjs = [];
@@ -20,7 +20,7 @@ function newAlpha(){
         letterObjs.push(abcObj);
     });
     displayAlpha();
-    saveList(letterObjs, 'alphahints')
+    saveList(letterObjs, alphaStorage)
      }
 
 function displayAlpha(){
@@ -33,34 +33,38 @@ function displayAlpha(){
 }
 
 function toggle(e){
-    let x = e.target.innerText;    
-    console.log(x);
+    let x = e.target.innerText;
+    let newState = '';    
     let index = letterObjs.findIndex((obj) => obj.letter === x);
-    console.log(index);
     if (letterObjs[index].guessState == "normal"){
         letterObjs[index].guessState = "grayed";
+        newState = "grayed";
     }
     else if (letterObjs[index].guessState =="grayed"){
         letterObjs[index].guessState = "highlight";
+        newState = "highlight";
     }
     else {
         letterObjs[index].guessState = "normal";
+        newState = "normal";
     }
-    //console.log(letterObjs)
     displayAlpha();
-    saveList(letterObjs,'alphahints'); 
+    saveList(letterObjs, alphaStorage);
+    updateLetterColors(x, newState); 
 
 }
 
 function setAlphaList(storedName){
     letterObjs = getSavedList(storedName);
-    console.log(letterObjs)
+    if (letterObjs.length == 0){
+        newAlpha();
+    }
     displayAlpha();
 }
 
 function startNew(){
-    console.log('clicked');
-    newWord(true) ;
+    let newGame = [true]
+    newWord(newGame) ;
     newAlpha();
     
 
@@ -68,7 +72,28 @@ function startNew(){
 
 function sendNewWord(){
     let nxt = document.getElementById('newguess').value ;
-    newWord(nxt);
+    let l1 = nxt.charAt(0);
+    let l2 = nxt.charAt(1);
+    let l3 = nxt.charAt(2);
+    let l4 = nxt.charAt(3);
+    let l1State = getState(l1);
+    let l2State = getState(l2);
+    let l3State = getState(l3);
+    let l4State = getState(l4);
+    let nxtArray = [nxt, l1, l2, l3, l4, l1State, l2State, l3State, l4State]
+    newWord(nxtArray);
+}
+
+function getState(x){
+    let i = 0
+    while (i<26){
+        console.log(letterObjs[i].letter, x);
+        if (letterObjs[i].letter == x){
+            return letterObjs[i].guessState;}
+        else {++i}    
+
+    }
+
 }
 
 function getEventListeners(){  
@@ -83,4 +108,4 @@ function getEventListeners(){
 }
 
  
-setAlphaList('alphahints');
+window.onload = function () {setAlphaList(alphaStorage)};
