@@ -71,7 +71,8 @@ function startNew(){
 }
 
 function sendNewWord(){    
-    let nxt = document.getElementById('newguess').value ;
+    let newgu = document.getElementById('newguess').value ;
+    let nxt = newgu.toLowerCase();   
     let l1 = nxt.charAt(0);
     let l2 = nxt.charAt(1);
     let l3 = nxt.charAt(2);
