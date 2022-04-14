@@ -2,6 +2,7 @@
 import newWord, { updateLetterColors } from "./guesses.js"
 import saveList from "./saveStorage.js";
 import getSavedList from './getStorage.js';
+import logicCheck from "./logic.js";
 
 const alphaStorage = 'alpha';
 const abc = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i',
@@ -28,8 +29,7 @@ function displayAlpha(){
     letterObjs.forEach(obj => {txt += `<div class = "box ` + obj.guessState+`"><p>`+ obj.letter + `</p></div>`;});
     txt += "<button id = 'newGame' > New Game</button>";
     document.getElementById('alpha').innerHTML = txt; 
-    getEventListeners(); 
-    
+    getEventListeners();     
 }
 
 function toggle(e){
@@ -70,7 +70,7 @@ function startNew(){
 
 }
 
-function sendNewWord(){
+function sendNewWord(){    
     let nxt = document.getElementById('newguess').value ;
     let l1 = nxt.charAt(0);
     let l2 = nxt.charAt(1);
@@ -84,10 +84,33 @@ function sendNewWord(){
     newWord(nxtArray);
 }
 
+function runLogic(){
+    
+    document.getElementById('framespan').classList.remove('change');
+    let results = logicCheck();
+    console.log(results);
+    let logicallyGray = results[0];
+    let logicallyYellow = results[1];
+    logicallyGray.forEach(x => {
+        let index = letterObjs.findIndex((obj) => obj.letter === x);
+        letterObjs[index].guessState = "grayed";
+        updateLetterColors(x, "grayed");
+    
+    });
+    logicallyYellow.forEach(x => {
+        let index = letterObjs.findIndex((obj) => obj.letter === x);
+        letterObjs[index].guessState = "highlight";
+        updateLetterColors(x, "highlight");
+    
+    });
+    displayAlpha();
+    saveList(letterObjs, alphaStorage);
+
+}
 function getState(x){
     let i = 0
     while (i<26){
-        console.log(letterObjs[i].letter, x);
+        //console.log(letterObjs[i].letter, x);
         if (letterObjs[i].letter == x){
             return letterObjs[i].guessState;}
         else {++i}    
@@ -104,6 +127,7 @@ function getEventListeners(){
     boxes.forEach(x => x.addEventListener('click', toggle));
     const newGame = document.getElementById('newGame');
     newGame.addEventListener('click',startNew );
+    document.getElementById('framespan').addEventListener('transitionend',runLogic )
 
 }
 

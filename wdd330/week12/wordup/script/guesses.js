@@ -3,10 +3,11 @@ import getSavedList from './getStorage.js';
 
 let guessedWords = [];
 
+const changeit = document.getElementById('framespan');
 const fixit = document.getElementById('correction');
 const outputDiv = document.getElementById('output');
 const wordURl = "https://api.dictionaryapi.dev/api/v2/entries/en/";
-const gameList = "game1";
+export const gameList = "game1";
 const Word = function(guessArray) {
     this.name = guessArray[0],
     this.l1 = guessArray[1],
@@ -38,6 +39,7 @@ export default function newWord(newg){
         document.getElementById('wordlist').innerHTML = makeLi();
         document.getElementById('output').innerHTML = '';
         
+        
     }
     else{
         console.log(newg)
@@ -52,6 +54,7 @@ export default function newWord(newg){
             document.getElementById('newguess').value = '';
             outputDiv.classList.add('winner');
             document.getElementById('close-btn').addEventListener('click', close)
+
         }
         else if (checkLength(newGuess)) {
             realWord(newg);}
@@ -105,6 +108,7 @@ function makeLi(){
             guessedWords.push(obj);
             saveList(guessedWords, gameList);
             document.getElementById('wordlist').innerHTML = makeLi();
+            changeit.classList.add('change');
         }
         else{
          let txt = ' Word not found in Dictionary';
@@ -115,6 +119,7 @@ function makeLi(){
      })
     
      }
+
 
  function score(x, y){
      console.log(x,y);
@@ -135,9 +140,9 @@ function designateTheWord(){
 
 }
 export function updateLetterColors(alpha, state){
-    console.log(alpha, state);
+    //console.log(alpha, state);
     guessedWords.forEach(word => {
-        console.log(word);
+        //console.log(word);
         if(word.l1 == alpha){
             word.l1State = state;
         }
